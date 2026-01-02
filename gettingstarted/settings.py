@@ -70,7 +70,7 @@ if IS_HEROKU_APP:
     # https://docs.djangoproject.com/en/6.0/ref/middleware/#http-strict-transport-security
     SECURE_SSL_REDIRECT = True
 else:
-    ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]", "0.0.0.0", "[::]"]
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://l3-getting-start.onrender.com']
 
 
 # Application definition
@@ -208,7 +208,7 @@ STORAGES = {
 WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 
 # Customise the default logging config, since by default full Django logs are only emitted when
-# `DEBUG=True` (which otherwise makes diagnosing errors much harder in production):
+DEBUG=True
 # https://docs.djangoproject.com/en/6.0/ref/logging/#default-logging-configuration
 # For more advanced logging you may want to try: https://django-structlog.readthedocs.io
 LOGGING = {
